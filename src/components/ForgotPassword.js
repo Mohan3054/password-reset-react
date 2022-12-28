@@ -17,7 +17,7 @@ const ForgotPassword = () => {
     const [message, setMessage] = useState("");
 
     const userValid = async () => {
-        const res = await fetch(`http://localhost:8010/forgotpassword/${id}/${token}`, {
+        const res = await fetch(`https://nodejsbackend1-qa6t.onrender.com/forgotpassword/${id}/${token}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -50,7 +50,7 @@ const ForgotPassword = () => {
                 position: "top-center"
             });
         } else {
-            const res = await fetch(`http://localhost:8010/${id}/${token}`, {
+            const res = await fetch(`https://nodejsbackend1-qa6t.onrender.com/${id}/${token}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
