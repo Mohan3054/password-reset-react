@@ -11,7 +11,7 @@ import { Routes, Route, useNavigate } from "react-router-dom"
 import { useEffect, useContext, useState } from "react";
 import { LoginContext } from "./components/ContextProvider/Context";
 
-export const URL ="https://nodejsbackend1-qa6t.onrender.com"
+export const URL ="https://password-reset-v7ow.onrender.com"
 function App() {
 
   const [data, setData] = useState(false);
