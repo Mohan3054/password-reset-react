@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { LoginContext } from './ContextProvider/Context';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import { URL } from '../App';
 
 const Dashboard = () => {
 
@@ -16,7 +17,7 @@ const Dashboard = () => {
     const DashboardValid = async () => {
         let token = localStorage.getItem("usersdatatoken");
 
-        const res = await fetch("https://nodejsbackend1-qa6t.onrender.com/validuser", {
+        const res = await fetch(`${URL}/validuser`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

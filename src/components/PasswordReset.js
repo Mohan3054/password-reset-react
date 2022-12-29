@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
+import { URL } from '../App';
 
 const PasswordReset = () => {
 
@@ -23,7 +24,7 @@ const PasswordReset = () => {
                 position: "top-center"
             });
         } else {
-            const res = await fetch("https://nodejsbackend1-qa6t.onrender.com/sendpasswordlink", {
+            const res = await fetch(`${URL}/sendpasswordlink`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

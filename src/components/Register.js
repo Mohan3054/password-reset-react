@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { NavLink } from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import "./mix.css"
+import "./mix.css";
+import { URL } from '../App';
 
 const Register = () => {
 
@@ -71,7 +72,7 @@ const Register = () => {
             // console.log("user registration succesfully done");
 
 
-            const data = await fetch("https://nodejsbackend1-qa6t.onrender.com/register", {
+            const data = await fetch(`${URL}/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

@@ -11,7 +11,7 @@ import { Routes, Route, useNavigate } from "react-router-dom"
 import { useEffect, useContext, useState } from "react";
 import { LoginContext } from "./components/ContextProvider/Context";
 
-
+export const URL ="https://nodejsbackend1-qa6t.onrender.com"
 function App() {
 
   const [data, setData] = useState(false);
@@ -24,7 +24,7 @@ function App() {
   const DashboardValid = async () => {
     let token = localStorage.getItem("usersdatatoken");
 
-    const res = await fetch("https://nodejsbackend1-qa6t.onrender.com/validuser", {
+    const res = await fetch(`${URL}/validuser`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
